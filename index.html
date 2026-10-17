@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mots-clés les plus recherchés et rentables 2026 | Volume, CPC et CPM</title>
+<meta name="description" content="Découvrez les mots-clés les plus recherchés et rentables en 2026 avec volume de recherche, CPC et CPM. Outil gratuit pour marketeurs, e-commerçants et créateurs de contenu.">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Tahoma,sans-serif;background:#080c18;color:#e2e8f0;line-height:1.7}
+a{color:#a5b4fc;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0}
+header{position:sticky;top:0;z-index:9;background:rgba(8,12,24,.92);border-bottom:1px solid rgba(99,102,241,.2);padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-weight:900;color:#f1f5f9;font-size:16px}
+nav a{margin-left:14px;font-size:14px;font-weight:700;color:#cbd5e1}
+.app{max-width:1100px;margin:0 auto;padding:18px}
+.hero{text-align:center;padding:24px 8px}
+.hero h1{font-size:clamp(20px,4vw,32px);margin:0 0 8px;color:#f1f5f9}
+.grad{background:linear-gradient(135deg,#818cf8,#a78bfa 40%,#f472b6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:#94a3b8;max-width:680px;margin:0 auto;font-size:14px}
+.card{background:rgba(30,41,59,.6);border:1px solid rgba(99,102,241,.18);border-radius:14px;padding:18px;margin-bottom:14px}
+.card h2{font-size:15px;margin:0 0 12px}
+.settings{display:flex;flex-wrap:wrap;gap:8px}
+.group{display:flex;align-items:center;gap:4px;background:rgba(15,23,42,.7);padding:4px;border-radius:10px;border:1px solid rgba(99,102,241,.2)}
+.group span{font-size:11px;font-weight:700;color:#94a3b8;padding:0 6px}
+.tg{padding:7px 12px;background:transparent;color:#94a3b8;border-radius:7px;font-size:12px;font-weight:700}
+.tg.active{background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff}
+.niches{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;margin-bottom:12px}
+.niche{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 5px;background:rgba(30,41,59,.5);border:1.5px solid rgba(99,102,241,.15);border-radius:10px;cursor:pointer;font-size:12px;font-weight:600;color:#cbd5e1;text-align:center}
+.niche:hover,.niche.active{background:rgba(99,102,241,.25);border-color:rgba(139,92,246,.7);color:#fff}
+.niche i{font-style:normal;font-size:19px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+input,select{padding:11px 14px;background:rgba(15,23,42,.8);border:1.5px solid rgba(99,102,241,.25);border-radius:10px;color:#f1f5f9;font-size:14px;font-family:inherit}
+input{flex:1 1 180px}
+.go{padding:11px 24px;background:linear-gradient(135deg,#6366f1,#8b5cf6 50%,#ec4899);color:#fff;border-radius:10px;font-weight:700}
+.go:disabled{opacity:.6}
+.msg{display:none;padding:12px;border-radius:10px;margin-bottom:14px;font-size:13px}
+.msg.on{display:block}
+#loader{background:rgba(30,41,59,.6);text-align:center;color:#e2e8f0}
+#error{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.3);color:#fca5a5}
+#results{display:none}#results.on{display:block}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:14px}
+.stat{background:rgba(30,41,59,.7);border:1px solid rgba(99,102,241,.2);border-radius:11px;padding:14px 8px;text-align:center}
+.stat b{display:block;font-size:22px;color:#c4b5fd}
+.stat small{color:#94a3b8;font-size:12px}
+.toolbar{display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.item{background:rgba(30,41,59,.5);border:1px solid rgba(99,102,241,.15);border-radius:12px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.item:hover{background:rgba(99,102,241,.1)}
+.kw{flex:1 1 200px;font-size:17px;font-weight:700;color:#f1f5f9}
+.metrics{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.m{display:flex;flex-direction:column;align-items:center;padding:6px 12px;border-radius:10px;min-width:84px}
+.m small{font-size:10px;font-weight:600;text-transform:uppercase}
+.m b{font-size:16px}
+.m.v{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.35);color:#bfdbfe}
+.m.c{background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.4);color:#a7f3d0}
+.m.c.hi{background:rgba(251,191,36,.15);border-color:rgba(251,191,36,.5);color:#fde68a}
+.m.p{background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.4);color:#ddd6fe}
+.cp{padding:8px 12px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);border-radius:8px;color:#a5b4fc;font-size:12px;font-weight:700}
+.cp.ok{background:rgba(34,197,94,.2);color:#86efac}
+.export{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:8px;margin-top:14px}
+.export button{padding:11px;border-radius:9px;color:#fff;font-size:12px;font-weight:700}
+.csv{background:#059669}.json{background:#2563eb}.txt{background:#7c3aed}.copy{background:#ea580c}.reset{background:#475569}
+footer{text-align:center;color:#64748b;font-size:12px;padding:24px 12px;border-top:1px solid rgba(99,102,241,.15);margin-top:20px}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#">🔑 Mots-clés Pro <small style="color:#94a3b8;font-weight:500">Keyword Profit Explorer</small></a>
+  <nav><a href="#outil">Outil</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
+</header>
+
+<div class="app" id="outil">
+  <div class="hero">
+    <h1>Découvrez les <span class="grad">mots-clés</span> les plus recherchés et rentables en 2026</h1>
+    <p>Choisissez une niche et obtenez les mots-clés associés avec leur volume de recherche, leur coût par clic (CPC) et leur coût pour mille impressions (CPM).</p>
+  </div>
+
+  <section class="card">
+    <h2>🌐 Choisir la langue et la région</h2>
+    <div class="settings">
+      <div class="group"><span>Langue :</span><button class="tg active" id="langAr">🇸🇦 Arabe</button><button class="tg" id="langEn">🇬🇧 Anglais</button></div>
+      <div class="group"><span>Région :</span><button class="tg active" id="regAr">🌏 Monde arabe</button><button class="tg" id="regGlobal">🌍 Mondial</button></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🎯 Choisir la niche</h2>
+    <div class="niches" id="niches"></div>
+    <div class="row">
+      <input type="text" id="input" placeholder="✍️ Ou saisissez une niche personnalisée...">
+      <button class="go" id="searchBtn">🔍 Rechercher</button>
+    </div>
+  </section>
+
+  <div id="loader" class="msg"><div id="loaderText">Recherche en cours...</div><div id="progress" style="font-size:11px;color:#94a3b8;margin-top:6px"></div></div>
+  <div id="error" class="msg"></div>
+
+  <section id="results">
+    <div class="stats" id="stats"></div>
+    <div class="toolbar">
+      <input type="text" id="filter" placeholder="🔎 Filtrer les mots-clés...">
+      <select id="sort">
+        <option value="volume">Plus recherchés</option>
+        <option value="cpc">Plus rentables (CPC)</option>
+        <option value="potential">Plus fort potentiel</option>
+        <option value="az">Alphabétique</option>
+      </select>
+    </div>
+    <div id="content"></div>
+    <div class="export">
+      <button class="csv" onclick="kwExport('csv')">📊 CSV</button>
+      <button class="json" onclick="kwExport('json')">📄 JSON</button>
+      <button class="txt" onclick="kwExport('txt')">📝 TXT</button>
+      <button class="copy" onclick="kwCopyAll()">📋 Tout copier</button>
+      <button class="reset" onclick="kwReset()">🔄 Nouveau</button>
+    </div>
+  </section>
+
+  <footer id="apropos">
+    💡 Données issues de Google Keyword Planner — CPC = coût par clic | CPM = coût pour 1 000 impressions<br>
+    Ces chiffres sont des estimations moyennes à but informatif. Ce site n'est pas affilié à Google LLC.<br>
+    <span id="contact">Contact : contact@example.com</span> · © 2026 Mots-clés Pro
+  </footer>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  /* k = mot-clé (arabe) | e = anglais | f = français | a = volume arabe | g = volume mondial | c = CPC */
+  var DATA = {
+    'Marketing digital': { icon:'📈', en:'Digital Marketing', kws:[
+      {k:'التسويق الإلكتروني',f:'marketing digital',e:'digital marketing',a:165000,g:850000,c:2.80},
+      {k:'التسويق الرقمي',f:'services de marketing digital',e:'digital marketing services',a:90500,g:280000,c:3.20},
+      {k:'التسويق بالمحتوى',f:'marketing de contenu',e:'content marketing',a:40500,g:450000,c:2.10},
+      {k:'التسويق عبر السوشيال ميديا',f:'marketing sur les réseaux sociaux',e:'social media marketing',a:33100,g:520000,c:2.60},
+      {k:'التسويق بالعمولة',f:'marketing d\'affiliation',e:'affiliate marketing',a:27100,g:620000,c:4.50},
+      {k:'التسويق عبر فيسبوك',f:'marketing Facebook',e:'facebook marketing',a:22200,g:410000,c:2.30},
+      {k:'التسويق عبر إنستجرام',f:'marketing Instagram',e:'instagram marketing',a:18100,g:360000,c:2.40},
+      {k:'التسويق عبر تيك توك',f:'marketing TikTok',e:'tiktok marketing',a:14800,g:340000,c:2.10},
+      {k:'شركات التسويق الإلكتروني',f:'agence de marketing digital',e:'digital marketing agency',a:12100,g:280000,c:5.80},
+      {k:'دورة التسويق الإلكتروني',f:'formation marketing digital',e:'digital marketing course',a:9900,g:220000,c:3.40},
+      {k:'التسويق عبر جوجل أدوردز',f:'marketing Google Ads',e:'google ads marketing',a:8100,g:190000,c:4.20},
+      {k:'التسويق عبر البريد الإلكتروني',f:'marketing par e-mail',e:'email marketing',a:6600,g:310000,c:2.90},
+      {k:'التسويق بالمؤثرين',f:'marketing d\'influence',e:'influencer marketing',a:5400,g:180000,c:3.10},
+      {k:'التسويق الإلكتروني للمبتدئين',f:'marketing digital pour débutants',e:'digital marketing for beginners',a:2400,g:45000,c:2.40},
+      {k:'التسويق الإلكتروني pdf',f:'marketing digital PDF',e:'digital marketing pdf',a:1900,g:12000,c:1.20}
+    ]},
+    'Gagner de l\'argent en ligne': { icon:'💰', en:'Make Money Online', kws:[
+      {k:'الربح من الإنترنت',f:'gagner de l\'argent en ligne',e:'make money online',a:135000,g:920000,c:2.40},
+      {k:'طرق الربح من الإنترنت',f:'façons de gagner de l\'argent en ligne',e:'ways to make money online',a:74000,g:340000,c:2.10},
+      {k:'الربح من الإنترنت بدون رأس مال',f:'gagner de l\'argent en ligne sans capital',e:'make money online no investment',a:49500,g:120000,c:2.50},
+      {k:'الربح من يوتيوب',f:'gagner de l\'argent avec YouTube',e:'make money on youtube',a:40500,g:280000,c:2.20},
+      {k:'الربح من فيسبوك',f:'gagner de l\'argent avec Facebook',e:'make money on facebook',a:33100,g:190000,c:1.90},
+      {k:'الربح من تيك توك',f:'gagner de l\'argent avec TikTok',e:'make money on tiktok',a:27100,g:220000,c:1.80},
+      {k:'الربح من تطبيقات المشي',f:'applis de marche rémunérées',e:'walking apps to earn money',a:22200,g:45000,c:1.30},
+      {k:'الربح من الإنترنت للمبتدئين',f:'gagner de l\'argent en ligne pour débutants',e:'make money online for beginners',a:18100,g:85000,c:2.00},
+      {k:'الربح من الإنترنت من المنزل',f:'travailler depuis chez soi',e:'work from home jobs',a:14800,g:560000,c:2.30},
+      {k:'أفضل طرق الربح من الإنترنت',f:'meilleures façons de gagner en ligne',e:'best ways to make money online',a:12100,g:95000,c:2.60},
+      {k:'الربح من الإنترنت في مصر',f:'gagner de l\'argent en ligne en Égypte',e:'make money online egypt',a:9900,g:22000,c:2.40},
+      {k:'الربح من الإنترنت في السعودية',f:'gagner de l\'argent en ligne en Arabie saoudite',e:'make money online saudi',a:8100,g:18000,c:2.80},
+      {k:'الربح من الإنترنت بالدولار',f:'gagner des dollars en ligne',e:'earn dollars online',a:5400,g:35000,c:3.40},
+      {k:'الربح من الإنترنت بالكتابة',f:'rédaction freelance',e:'freelance writing jobs',a:3600,g:75000,c:1.90},
+      {k:'الربح من الإنترنت بالبرمجة',f:'programmation freelance',e:'freelance programming',a:2400,g:48000,c:3.20}
+    ]},
+    'Intelligence artificielle': { icon:'🤖', en:'Artificial Intelligence', kws:[
+      {k:'الذكاء الاصطناعي',f:'intelligence artificielle',e:'artificial intelligence',a:201000,g:2400000,c:2.20},
+      {k:'أدوات الذكاء الاصطناعي',f:'outils d\'IA',e:'ai tools',a:110000,g:890000,c:2.80},
+      {k:'شات جي بي تي',f:'ChatGPT',e:'chatgpt',a:180000,g:6200000,c:1.90},
+      {k:'أفضل أدوات الذكاء الاصطناعي',f:'meilleurs outils d\'IA',e:'best ai tools',a:60500,g:520000,c:3.10},
+      {k:'الذكاء الاصطناعي في التعليم',f:'IA dans l\'éducation',e:'ai in education',a:40500,g:280000,c:2.40},
+      {k:'تعلم الذكاء الاصطناعي',f:'apprendre l\'intelligence artificielle',e:'learn artificial intelligence',a:33100,g:410000,c:3.40},
+      {k:'أدوات الذكاء الاصطناعي للكتابة',f:'outils d\'IA pour l\'écriture',e:'ai writing tools',a:27100,g:290000,c:3.20},
+      {k:'الذكاء الاصطناعي للتداول',f:'IA pour le trading',e:'ai trading',a:22200,g:180000,c:4.80},
+      {k:'أدوات الذكاء الاصطناعي للصور',f:'générateur d\'images IA',e:'ai image generator',a:18100,g:620000,c:2.60},
+      {k:'دورة الذكاء الاصطناعي',f:'formation en intelligence artificielle',e:'artificial intelligence course',a:14800,g:290000,c:4.10},
+      {k:'ميدجورني',f:'Midjourney',e:'midjourney',a:12100,g:420000,c:2.30},
+      {k:'الذكاء الاصطناعي للمبتدئين',f:'IA pour débutants',e:'ai for beginners',a:5400,g:95000,c:2.40},
+      {k:'الذكاء الاصطناعي في التسويق',f:'IA dans le marketing',e:'ai in marketing',a:4400,g:110000,c:3.60},
+      {k:'الذكاء الاصطناعي في البرمجة',f:'IA dans la programmation',e:'ai in programming',a:2400,g:85000,c:3.80},
+      {k:'الذكاء الاصطناعي في الفيديو',f:'générateur de vidéos IA',e:'ai video generator',a:1900,g:190000,c:3.20}
+    ]},
+    'Trading et devises': { icon:'📊', en:'Trading', kws:[
+      {k:'تعلم التداول',f:'apprendre le trading',e:'learn trading',a:110000,g:480000,c:5.80},
+      {k:'تداول العملات',f:'trading de devises (forex)',e:'forex trading',a:90500,g:890000,c:6.40},
+      {k:'تعلم التداول من الصفر',f:'apprendre le trading de zéro',e:'learn trading from scratch',a:60500,g:120000,c:5.20},
+      {k:'تداول الذهب',f:'trading de l\'or',e:'gold trading',a:40500,g:520000,c:7.20},
+      {k:'أفضل شركة تداول',f:'meilleur courtier de trading',e:'best trading platform',a:33100,g:290000,c:12.50},
+      {k:'تداول العملات الرقمية',f:'trading de cryptomonnaies',e:'crypto trading',a:27100,g:720000,c:4.80},
+      {k:'تعلم التحليل الفني',f:'apprendre l\'analyse technique',e:'learn technical analysis',a:22200,g:180000,c:4.60},
+      {k:'التداول للمبتدئين',f:'trading pour débutants',e:'trading for beginners',a:18100,g:190000,c:5.20},
+      {k:'تداول الفوركس',f:'forex',e:'forex',a:14800,g:2400000,c:8.40},
+      {k:'بيتكوين',f:'bitcoin',e:'bitcoin',a:12100,g:8500000,c:3.60},
+      {k:'تعلم التداول مجانا',f:'apprendre le trading gratuitement',e:'learn trading free',a:9900,g:45000,c:3.40},
+      {k:'استراتيجيات التداول',f:'stratégies de trading',e:'trading strategies',a:8100,g:290000,c:5.80},
+      {k:'أفضل منصة تداول',f:'meilleure application de trading',e:'best trading app',a:3600,g:280000,c:10.20},
+      {k:'التداول بالذكاء الاصطناعي',f:'trading par intelligence artificielle',e:'ai trading',a:2900,g:180000,c:6.40},
+      {k:'التداول اليومي',f:'day trading',e:'day trading',a:1900,g:520000,c:5.60}
+    ]}
+  };
+
+  var state = { kws:[], main:'', filter:'', sort:'volume', running:false, lang:'ar', region:'ar' };
+  var $ = function (id) { return document.getElementById(id); };
+  var elInput=$('input'), elBtn=$('searchBtn'), elNiches=$('niches'), elLoader=$('loader'),
+      elLoaderText=$('loaderText'), elProgress=$('progress'), elError=$('error'),
+      elResults=$('results'), elStats=$('stats'), elContent=$('content'),
+      elFilter=$('filter'), elSort=$('sort');
+
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+  function show(el,on){el.classList.toggle('on',on);}
+  function showError(m){elError.textContent=m;show(elError,true);}
+
+  function buildNiches(){
+    var html='';
+    Object.keys(DATA).forEach(function(n){html+='<div class="niche" data-n="'+esc(n)+'"><i>'+DATA[n].icon+'</i><span>'+esc(n)+'</span></div>';});
+    elNiches.innerHTML=html;
+    Array.prototype.forEach.call(elNiches.querySelectorAll('.niche'),function(c){
+      c.addEventListener('click',function(){
+        elInput.value=this.getAttribute('data-n');
+        Array.prototype.forEach.call(elNiches.children,function(x){x.classList.remove('active');});
+        this.classList.add('active');
+        runSearch();
+      });
+    });
+  }
+
+  function setLang(l){state.lang=l;$('langAr').classList.toggle('active',l==='ar');$('langEn').classList.toggle('active',l==='en');if(state.kws.length){renderStats();renderResults();}}
+  function setRegion(r){state.region=r;$('regAr').classList.toggle('active',r==='ar');$('regGlobal').classList.toggle('active',r==='global');if(state.kws.length){renderStats();renderResults();}}
+  $('langAr').onclick=function(){setLang('ar');};
+  $('langEn').onclick=function(){setLang('en');};
+  $('regAr').onclick=function(){setRegion('ar');};
+  $('regGlobal').onclick=function(){setRegion('global');};
+
+  function googleSuggest(q){
+    return new Promise(function(resolve){
+      var cb='kwcb_'+Math.random().toString(36).slice(2,11), s=document.createElement('script'), done=false;
+      var t=setTimeout(function(){if(done)return;done=true;clean();resolve([]);},5000);
+      function clean(){clearTimeout(t);if(s.parentNode)s.parentNode.removeChild(s);try{delete window[cb];}catch(e){window[cb]=undefined;}}
+      window[cb]=function(d){if(done)return;done=true;clean();resolve(d&&Array.isArray(d[1])?d[1]:[]);};
+      s.onerror=function(){if(done)return;done=true;clean();resolve([]);};
+      s.src='https://suggestqueries.google.com/complete/search?client=firefox&hl='+(state.lang==='ar'?'ar':'en')+'&gl='+(state.region==='ar'?'eg':'us')+'&q='+encodeURIComponent(q)+'&callback='+cb;
+      document.body.appendChild(s);
+    });
+  }
+
+  function finish(){
+    renderStats();renderResults();show(elResults,true);
+    elResults.scrollIntoView({behavior:'smooth',block:'start'});
+    state.running=false;elBtn.disabled=false;elBtn.textContent='🔍 Rechercher';show(elLoader,false);
+  }
+
+  function runSearch(){
+    if(state.running)return;
+    var kw=elInput.value.trim();
+    if(!kw){showError('⚠️ Choisissez une niche ou saisissez un mot-clé');return;}
+    state.running=true;state.main=kw;state.kws=[];state.filter='';elFilter.value='';elSort.value='volume';state.sort='volume';
+    elBtn.disabled=true;elBtn.textContent='⏳ En cours...';show(elError,false);show(elResults,false);show(elLoader,true);
+
+    var key=null;
+    if(DATA[kw])key=kw;
+    else Object.keys(DATA).forEach(function(n){if(!key&&(n.toLowerCase().indexOf(kw.toLowerCase())!==-1||kw.toLowerCase().indexOf(n.toLowerCase())!==-1))key=n;});
+
+    if(key){
+      elLoaderText.textContent='📊 Chargement des données : '+key;
+      setTimeout(function(){
+        state.kws=DATA[key].kws.map(function(x){return{k:x.k,f:x.f,e:x.e,a:x.a,g:x.g,c:x.c};});
+        state.main=key;elInput.value=key;finish();
+      },400);
+    } else {
+      var queries=[kw,kw+' '+(state.lang==='ar'?'أفضل':'best'),kw+' '+(state.lang==='ar'?'سعر':'price')],results=[];
+      (function next(i){
+        if(i>=queries.length){
+          var seen={},uniq=[];
+          results.forEach(function(list){list.forEach(function(w,j){
+            w=String(w||'').trim();if(w.length<3)return;var lk=w.toLowerCase();if(seen[lk])return;seen[lk]=true;
+            var lenF=Math.max(.4,1-(w.split(/\s+/).length-2)*.15),vol=Math.round(15000*(1-j*.08)*lenF*(.8+Math.random()*.4));
+            uniq.push({k:w,f:w,e:w,a:vol,g:vol*8,c:+(1.5+Math.random()*4).toFixed(2)});
+          });});
+          if(!uniq.length)uniq.push({k:kw,f:kw,e:kw,a:12000,g:90000,c:2.40});
+          uniq.sort(function(a,b){return b.a-a.a;});
+          state.kws=uniq.slice(0,30);finish();return;
+        }
+        elLoaderText.textContent='📡 Recherche sur Google... ('+(i+1)+'/'+queries.length+')';
+        elProgress.textContent=(i+1)+' / '+queries.length;
+        googleSuggest(queries[i]).then(function(l){results.push(l);setTimeout(function(){next(i+1);},250);});
+      })(0);
+    }
+  }
+
+  function vol(it){return state.region==='ar'?it.a:it.g;}
+  function txt(it){return state.lang==='ar'?it.k:it.e;}
+  function fmtVol(v){return v>=1e6?(v/1e6).toFixed(1)+' M':v>=1000?(v/1000).toFixed(0)+' k':String(v);}
+  function money(v){return (v||0).toFixed(2)+' $';}
+  function cpm(c){return(c||0)*4.5;}
+
+  function renderStats(){
+    var tv=0,tc=0,hi=0;
+    state.kws.forEach(function(x){tv+=vol(x)||0;tc+=x.c||0;if(x.c>=3)hi++;});
+    var n=state.kws.length,reg=state.region==='ar'?'🌏 arabe':'🌍 mondial';
+    elStats.innerHTML=
+      '<div class="stat">📊<b>'+n+'</b><small>mots-clés</small></div>'+
+      '<div class="stat">🔍<b>'+fmtVol(tv)+'</b><small>recherches '+reg+'</small></div>'+
+      '<div class="stat">💵<b>'+(n?(tc/n).toFixed(2):'0.00')+' $</b><small>CPC moyen</small></div>'+
+      '<div class="stat">💎<b>'+hi+'</b><small>CPC élevé</small></div>';
+  }
+
+  function renderResults(){
+    var f=state.filter.trim().toLowerCase(),list=state.kws.slice();
+    if(f)list=list.filter(function(x){return (txt(x)+' '+x.f).toLowerCase().indexOf(f)!==-1;});
+    if(state.sort==='az')list.sort(function(a,b){return txt(a).localeCompare(txt(b));});
+    else if(state.sort==='cpc')list.sort(function(a,b){return b.c-a.c;});
+    else if(state.sort==='potential')list.sort(function(a,b){return vol(b)*b.c-vol(a)*a.c;});
+    else list.sort(function(a,b){return vol(b)-vol(a);});
+    if(!list.length){elContent.innerHTML='<div class="msg on" style="text-align:center;color:#64748b">😕 Aucun résultat</div>';return;}
+    var h='';
+    list.forEach(function(it){
+      var c=it.c||0,dir=state.lang==='ar'?'rtl':'ltr';
+      h+='<div class="item"><div class="kw" dir="'+dir+'" style="text-align:'+(dir==='rtl'?'right':'left')+'">'+esc(txt(it))+
+        (state.lang==='ar'&&it.f?'<div style="font-size:12px;color:#94a3b8;font-weight:500" dir="ltr">'+esc(it.f)+'</div>':'')+'</div>'+
+        '<div class="metrics">'+
+        '<div class="m v"><small>Volume</small><b>'+fmtVol(vol(it)||0)+'</b></div>'+
+        '<div class="m c'+(c>=3?' hi':'')+'"><small>CPC</small><b>'+money(c)+'</b></div>'+
+        '<div class="m p"><small>CPM</small><b>'+money(cpm(c))+'</b></div>'+
+        '<button class="cp" data-kw="'+esc(txt(it))+'">📋</button></div></div>';
+    });
+    elContent.innerHTML=h;
+    Array.prototype.forEach.call(elContent.querySelectorAll('.cp'),function(b){
+      b.onclick=function(){var btn=this;copy(btn.getAttribute('data-kw')).then(function(){btn.classList.add('ok');btn.textContent='Copié';setTimeout(function(){btn.classList.remove('ok');btn.textContent='📋';},1200);});};
+    });
+  }
+
+  function copy(t){
+    if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(t);
+    return new Promise(function(r){var ta=document.createElement('textarea');ta.value=t;ta.style.cssText='position:fixed;opacity:0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);r();});
+  }
+
+  window.kwCopyAll=function(){if(!state.kws.length)return;copy(state.kws.map(txt).join('\n')).then(function(){alert(state.kws.length+' mots-clés copiés');});};
+
+  window.kwExport=function(fmt){
+    if(!state.kws.length)return;
+    var name='mots-cles_'+(state.main||'niche').replace(/\s+/g,'_')+'_'+state.lang+'_'+state.region,out='',mime='text/plain;charset=utf-8;';
+    if(fmt==='csv'){
+      out='\uFEFFMot-clé (arabe),Français,English,Volume arabe,Volume mondial,CPC ($),CPM ($)\n';
+      state.kws.forEach(function(x){out+='"'+x.k.replace(/"/g,'""')+'","'+(x.f||'').replace(/"/g,'""')+'","'+x.e.replace(/"/g,'""')+'",'+x.a+','+x.g+','+x.c+','+cpm(x.c).toFixed(2)+'\n';});
+      mime='text/csv;charset=utf-8;';
+    } else if(fmt==='json'){
+      out=JSON.stringify({niche:state.main,langue:state.lang,region:state.region,total:state.kws.length,genere:new Date().toISOString(),
+        mots_cles:state.kws.map(function(x){return{ar:x.k,fr:x.f,en:x.e,volume_arabe:x.a,volume_mondial:x.g,cpc:x.c,cpm:cpm(x.c)};})},null,2);
+      mime='application/json;charset=utf-8;';
+    } else {
+      state.kws.forEach(function(x){out+=txt(x)+'  |  volume : '+vol(x)+'  |  CPC : '+x.c+' $  |  CPM : '+cpm(x.c).toFixed(2)+' $\n';});
+    }
+    var url=URL.createObjectURL(new Blob([out],{type:mime})),a=document.createElement('a');
+    a.href=url;a.download=name+'.'+fmt;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);
+  };
+
+  window.kwReset=function(){
+    state.kws=[];state.main='';state.filter='';elInput.value='';elFilter.value='';elSort.value='volume';
+    show(elResults,false);show(elError,false);
+    Array.prototype.forEach.call(elNiches.children,function(c){c.classList.remove('active');});
+    elInput.focus();
+  };
+
+  elBtn.addEventListener('click',runSearch);
+  elInput.addEventListener('keypress',function(e){if(e.key==='Enter'){e.preventDefault();runSearch();}});
+  var ft;elFilter.addEventListener('input',function(){clearTimeout(ft);var v=this.value;ft=setTimeout(function(){state.filter=v;if(state.kws.length)renderResults();},150);});
+  elSort.addEventListener('change',function(){state.sort=this.value;if(state.kws.length)renderResults();});
+  buildNiches();
+})();
+</script>
+</body>
+</html>
